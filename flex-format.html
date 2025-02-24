@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex布局</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+        display: flex;
+      }
+      .flex {
+        display: flex;
+      }
+      .baiSe {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .flexcolumn {
+        flex-direction: column;
+      }
+      .flexrow {
+        flex-direction: row;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mg8r {
+        margin-right: 8px;
+      }
+      .mg8l {
+        margin-left: 8px;
+      }
+      .mg8t {
+        margin-top: 8px;
+      }
+      .mg8b {
+        margin-bottom: 8px;
+      }
+      .content-area {
+        overflow-y: auto;
+        flex: 1;
+      }
+      .sidebar {
+        width: 200px;
+        flex-shrink: 0;
+      }
+      .header {
+        height: 60px;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body class="flex ">
+    <!--侧边栏-->
+    <div class="sidebar baiSe mg8l mg8t mg8b"></div>
+    <!--主区域-->
+    <div class="flex1 flexcolumn flex">
+      <!--头部栏-->
+      <div class="header baiSe mg8l mg8t mg8r"></div>
+      <!--内容区-->
+      <div class="flex1 flex content-area">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flexcolumn">
+          <!-- 左上区 -->
+          <div class="flex mg8l mg8t">
+            <div style="height: 100px" class="flexrow flex1 baiSe mg8r"></div>
+            <div style="height: 100px" class="flexrow flex1 baiSe mg8r"></div>
+            <div style="height: 100px" class="flexrow flex1 baiSe mg8r"></div>
+            <div style="height: 100px" class="flexrow flex1 baiSe"></div>
+          </div>
+          <!-- 列表项 -->
+          <div class="flexcolumn mg8l">
+            <div style="height: 100px" class="flexrow flex1 baiSe mg8t"></div>
+            <div style="height: 100px" class="flexrow flex1 baiSe mg8t"></div>
+            <div style="height: 100px" class="flexrow flex1 baiSe mg8t"></div>
+            <div style="height: 100px" class="flexrow flex1 baiSe mg8t"></div>
+            <div style="height: 100px" class="flexrow flex1 baiSe mg8t"></div>
+            <div style="height: 100px" class="flexrow flex1 baiSe mg8t"></div>
+            <div style="height: 100px" class="flexrow flex1 baiSe mg8t"></div>
+            <div style="height: 100px" class="flexrow flex1 baiSe mg8t"></div>
+          </div>
+        </div>
+
+        <!-- 右区 -->
+        <div style="flex: 1" class="flexcolumn mg8">
+          <!-- 提示区 -->
+          <div style="height: 300px" class="baiSe"></div>
+          <!-- 消息区 -->
+          <div style="height: 150px" class="baiSe mg8t"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
